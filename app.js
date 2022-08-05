@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/adicao_receita", (req, res) => {
   res.render("adicao_receita", {
-    title: "Adicionar receita",
+    title: "Nova receita",
     links: [
       { href: "/index", label: "Home"},
       { href: "/receitas", label: "Receitas"},
@@ -43,7 +43,6 @@ app.get("/edicao_receita", (req, res) => {
   });
 });
 
-
 app.get("/index", (req, res) => {
   res.render("index", {
     title: "Página inicial",
@@ -54,6 +53,8 @@ app.get("/index", (req, res) => {
     ]
   });
 });
+
+
 
 app.get("/receitas-individual", (req, res) => {
   res.render("receitas-individual", {
