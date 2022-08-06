@@ -16,7 +16,7 @@ form{
     margin-right: auto;
 }
 
-.img > label{
+.uploadImg > label{
     display: block;
 }
 
@@ -67,4 +67,16 @@ input::placeholder, textarea::placeholder{
 
 .img >{
     display: block;
+}
+
+#upload{
+    border: 2.5px solid #393939;
+    border-radius: 10px;
+    height: 18vw;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.uploadImg > input{
+    display: none;
 }

@@ -18,9 +18,10 @@
         <%- include("header")  %> 
     </header>
     <form action="post">
-        <div class="form-group img">
-            <label for="image">Adicione a foto de sua receita</label>
-            <input type="file">
+        <div class="form-group uploadImg">
+            <label for="uploadImage">Adicione a foto de sua receita</label>
+            <label for="uploadImage"><img src="/images/upload.jpg" alt="Faça o upload da foto da receita" id="upload"></label>
+            <input type="file" name="image" id="uploadImage">
         </div>
         <div class="form-group">
             <label for="recipeTitle">Título da receita</label>
@@ -53,5 +54,6 @@
     <footer>
         <%- include("footer") %> 
     </footer>
+    <script type="text/javascript" src="/js/fileUpload.js"></script>
 </body>
 </html>
