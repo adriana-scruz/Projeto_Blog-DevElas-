@@ -1,0 +1,13 @@
+p{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 550;
+    font-size: medium;
+    line-height: 28px;
+    text-align: center;
+    color: #393939;
+}
+
+.footer{
+    margin-bottom: 4%;
+}
