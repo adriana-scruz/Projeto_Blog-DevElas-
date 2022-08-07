@@ -1,0 +1,55 @@
+body{
+    background-color: #FBF6F3;
+}
+
+main{
+    width: 70%;
+    margin: auto auto;
+    justify-content: center;
+}
+
+.block1{
+    display: flex;
+    justify-content: space-around;
+}
+
+iframe{
+    border: 2px solid #000000;
+}
+
+#recipe{
+    height: 30vh;
+    margin-bottom: 4%;
+}
+
+.title, .title-rating{
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 900;
+    color: #000000;
+    font-size: 3.5vh;
+    text-align: left;
+    padding-top: 5%;
+}
+
+.title-rating{
+    font-size: 2.5vh;
+    text-align: right;
+}
+
+li, .paragraph{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+    font-size: 2.5vh;
+    text-align: left;
+}
+
+.block2{
+    padding: 0 1.5%;
+}
+
+footer{
+    padding-top: 3%;
+}
