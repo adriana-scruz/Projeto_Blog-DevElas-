@@ -1,1 +1,232 @@
-[{"autor":"Autor Genérico","receita":"Receita Genérica"},{"autor":"Larissa","caixaTexto":"Melhor receita de empada"}]
+[
+    {
+        "id": "0000001",
+        "titulo": "Babaganuche",
+        "ingredientes": "2 berinjelas grandes e picadas; 1 cebola grande e picada; 2 cabeças de alho; 2 colheres de sopa de azeite; 1 colher de sopa de orégano; 1 colher de sopa de manjericão; Sal e pimenta a gosto",
+        "preparo": "Refogue as berinjelas no azeite com a cebola e o alho. Em seguida, coloque tudo no liquidificador e vá acrescentando o orégano e o manjericão. Coloque num recipiente com tampa e cubra com azeite. Conserve na geladeira até a hora de servir. Sirva com torradas ou pão sírio torrado.",
+        "categoria": "pasta",
+        "local": "árabe",
+        "nivel": "fácil",
+        "autor": "Mohamed"
+    },
+    {
+        "id": "0000002",
+        "titulo": "Charuto",
+        "ingredientes": "1 repolho médio; 1/2 kg carne moída; 1/2 kg arroz; 2 tomates médios; Extrato de tomate a gosto sal, pimenta, cebola, alho e outros condimentos à gosto.",
+        "preparo": "Cozinhe o repolho em uma panela que o caiba de modo que possa ir tirando as folhas cozidas de fora para dentro do repolho, não é necessário cozê-lo muito é só para amolecer as folhas. 2º Misture todos os outros ingredientes, formando uma massa. 3º Coloque massa em folhas de repolho e enrole, não colocar muito, pois o arroz vai crescer. 4º Colocando tudo em uma panela com água quente e a água deve estar temperada para passar tempero às folhas de repolho. 5º Pode servi-lo com limão e azeite de Oliva, outro prato pode acompanhar, mas é bom que se tenha um molho do cozido dos charutos.",
+        "categoria": "guarnição",
+        "local": "árabe",
+        "nivel": "médio",
+        "autor": "Mohamed"
+    },
+    {
+        "id": "0000003",
+        "titulo": "Dafim",
+        "ingredientes": "250g grão de bico; 1 frango cortado em pedaços; 1 maço de salsa; 3 cebolas cortadas em fatias finas no comprimento; 5 colheres sopa de óleo; 5 colheres sopa de margarina; 2 1/2 xicaras chá de arroz lavado; 1 colher chá de pimenta síria; Óleo e sal a gosto para cozimento",
+        "preparo": "Na véspera deixe o grão de bico de molho. Na hora do preparo cozinhe o grão de bico na pressão em 1 litro de água por 10 minutos. Reserve o caldo. Tempere o frango com sal e cozinhe na pressão com 1 litro de água. Reserve o caldo. Em uma panela meio alta, coloque o óleo e a margarina, frite a cebola até começar a dourar, mexendo sempre. Ainda na panela, coloque por cima da cebola o grão de bico, o frango, o arroz já lavado e escorrido e por cima deste, a pimenta síria. Acrescente a água do cozimento do frango e do grão de bico reservada, coloque até cobrir o arroz. Prove o tempero, se necessário, acrescente mais sal. Tampe a panela e deixe cozinhar. Quando o arroz estiver cozido, passe uma faca em volta para soltá-lo, vire a panela com cuidado sobre uma bandeja para desenformá-lo. Arrume e decore a gosto. Este prato pode ser único ou acompanhado de salada.",
+        "categoria": "pasta",
+        "local": "árabe",
+        "nivel": "médio",
+        "autor": "Safira"
+    },
+    {
+        "id": "0000004",
+        "titulo": "Esfiha recheada",
+        "ingredientes": "Massa: 1 kg de farinha de trigo; 2 tabletes de fermento para pão; 2 ovos; 2 colheres de sopa de manteiga; 1 colher de chá de sal; 1 colher de sopa de açúcar; 2 xícaras de leite; 1/4 de xícara de óleo; Recheio: 2 colheres de sopa de azeite; 1/2 kg de carne moída; 2 tomates; 2 cebolas; suco de 1 limão; 1/2 maço de salsinha; sal e pimenta-do-reino a gosto.",
+        "preparo": "Dissolva o fermento na água morna. Reserve. Junte à farinha o sal, o açúcar, o óleo, os ovos, a manteiga derretida, o leite morno e o fermento reservado. Misture bem e trabalhar a massa com as mãos até ficar bem lisa. Deixe repousar 1 hora coberta com um pano em lugar abafado. Abra a massa com um rolo, numa espessura de cerca de 1 cm e corte pequenos quadrados. Recheie com carne moída, e feche na forma de um triângulo, umedecendo as pontas da massa para fechar melhor. Aperte bem e deixe repousar mais 10 minutos. Coloque numa assadeira, polvilhada com farinha de trigo. Pincele cada esfiha com leite e levar ao forno preaquecido durante 20 minutos. Para o recheio: Refogue a carne moída no azeite. Misture os tomates e as cebolas picadas. Tempere com o sal e a pimenta a gosto. Regue com o suco de limão e acrescente a salsinha picada. Dica: Para fazer a esfiha aberta, corte a massa em círculos e coloque o recheio de carne no meio, pressionando com o dedo para dentro, de forma a ficar uma borda de massa mais elevada.",
+        "categoria": "entrada",
+        "local": "árabe",
+        "nivel": "difícil",
+        "autor": "Safira"
+    },
+    {
+        "id": "0000005",
+        "titulo": "Frango com açafrão",
+        "ingredientes": "1 frango grande; 4 colheres de sopa de manteiga; 2 cebolas médias; 1 dente de alho; 1 envelope de açafrão; 1 rama de canela em pau; sal e pimenta-do-reino a gosto; 5 xícaras de chá de água; 2 xícaras de chá de arroz; 1/2 maço de salsinha; 1 colher de sopa de hortelã seca",
+        "preparo": "Corte o frango em pedaços e doure-os na manteiga. Junte a cebola e o alho picados, o açafrão, a canela, o sal, a pimenta e a água. Cozinhe até amaciar. Retire e desfie o frango. Cozinhe o arroz no caldo do frango em fogo baixo. Quando estiver pronto, coloque a salsinha e a hortelã. Coloque o frango desfiado numa travessa, rodeada de arroz.",
+        "categoria": "principal",
+        "local": "árabe",
+        "nivel": "médio",
+        "autor": "Safira"
+    },
+    {
+        "id": "0000006",
+        "titulo": "Kafta",
+        "ingredientes": "500 gramas de patinho moído; 1 cebola picada; 4 dentes de alho; 2 colheres de sopa de hortelã picada; 1 colher de sopa de salsinha picada; 1/2 xícara de azeite; 1 colher de café de sal; 1 colher de café da pimenta do reino; 1/2 colher de café de gengibre ralado; 1 tomate picado; 1 ovo; 10 palitos para churrasco",
+        "preparo": "Numa vasilha misture a carne com a cebola, o alho, o tomate, a salsinha e a hortelã. Reserve. Numa vasilha bata a clara em neve, junte a gema, o azeite, o gengibre, o sal, a pimenta e misture a mistura de carne, cebola, alho e ervas. Incorpore bem. Faça bolas gordas e usando o palito, molde em formato de cilindros por cima dos palitos. Faça isso em todos os palitos. Aperte as extremidades para ficarem mais firmes. Frite as kaftas numa chapa ou numa frigideira, virando-as dos dois lados.",
+        "categoria": "guarnição",
+        "local": "árabe",
+        "nivel": "médio",
+        "autor": "Aisha"
+    },
+    {
+        "id": "0000007",
+        "titulo": "Quibe de forno",
+        "ingredientes": "1 xícara de trigo para quibe; 2 tabletes de caldo de carne; 300 gramas de carne moída; 1 colher de sopa de margarina; 1 cebola picada; 2 ramos de hortelã picados; 1 colher de sopa de margarina",
+        "preparo": "Na véspera, deixe o trigo de molho em ½ litro de água. Dissolva os tabletes de caldo de carne em 1/2 xícara de água fervente e espere esfriar. Tempere a carne com o caldo já frio e deixe tomar gosto por uns 10 minutos. Junte o trigo escorrido, a margarina, a cebola e a hortelã. Misture tudo muito bem e arrume numa forma refratária, alisando a superfície. Distribua por cima pedacinhos de margarina e leve para assar em forno quente por cerca de 30 minutos.",
+        "categoria": "entrada",
+        "local": "árabe",
+        "nivel": "médio",
+        "autor": "Mohamed"
+    },
+    {
+        "id": "0000008",
+        "titulo": "Salada Árabe",
+        "ingredientes": "1 pé de alface americano; 50 gramas de grão de bico; 1 beterraba; 1 cenoura ralada; 1 tomate; 4 colheres de maionese; 1 xícara de creme de leite; 1 colher de catchup; Sal a gosto",
+        "preparo": "Corte a alface a juliana. Rale a cenoura e a beterraba. Cozinhe o grão de bico. Pique o tomate. Faça o molho juntando a maionese, o catchup e o creme de leite. Junte todos os ingredientes. Coloque sal e depois despeje o molho por cima.",
+        "categoria": "entrada",
+        "local": "árabe",
+        "nivel": "fácil",
+        "autor": "Safira"
+    },
+    {
+        "id": "0000009",
+        "titulo": "Salada de grão de bico",
+        "ingredientes": "3 xícaras de grão-de-bico cozido; 3 tomates não muito maduros, sem sementes e picados; 1 xícara de cebola picada; 4 colheres de sopa de salsa picada; 1/3 de xícara de suco de limão; 2 colheres de sopa de tahine (feito de gergelim); 1/2 xícara de azeite; sal a gosto",
+        "preparo": "Misture numa saladeira o azeite, o suco de limão, a tahine, a salsa e o sal. Mexa bem e acrescente o grão-de-bico frio e o tomate picado. Deixe gelar um pouco na geladeira antes de servir. ",
+        "categoria": "entrada",
+        "local": "árabe",
+        "nivel": "fácil",
+        "autor": "Samuel"
+    },
+    {
+        "id": "0000010",
+        "titulo": "Tabule",
+        "ingredientes": "255 gramas de trigo para quibe; 3 colheres de sopa de cebolinhas picadas; 1 cebola grande bem picada; 1 xícara de salsa fresca bem picada; 3 colheres de sopa de hortelã fresca picada; 4 colheres de sopa de azeite de oliva; 4 colheres de sopa de suco de limão; sal marinho e pimenta-do-reino a gosto",
+        "preparo": "Deixe o trigo de molho em água durante 1/2 hora. Depois disso, o trigo deverá aumentar de volume. Escorra-o, esprema-o e espalhe-o num pano limpo, para que seque bem. Misture o trigo com todos os demais ingredientes. Prove o tempero e acrescente mais suco de limão, se necessário. Dica para servir: Decore com azeitonas, quartos de tomate e ramos de salsa.",
+        "categoria": "entrada",
+        "local": "árabe",
+        "nivel": "fácil",
+        "autor": "Aisha"
+    },
+    {
+        "id": "0000011",
+        "titulo": "Homus",
+        "ingredientes": "250 gramas de grão-de-bico cozido em água e sal e sem pele; 1/2 xícara da água que serviu para cozinhar os grãos; 2 colheres de sopa de tahine (molho de gergelim); 1 dente de alho; Azeite; Limão; Salsa picada; Sal",
+        "preparo": "Coloque a água no liquidificador e aos poucos vá jogando os grãos. Continue batendo a massa no liquidificador e vá adicionando o alho, a tahine, o azeite e suco de limão aos poucos, até obter um creme. Tempere com salsa a gosto e despeje numa vasilha. Polvilhe com a salsa picada e conserve na geladeira até a hora de servir. ",
+        "categoria": "pasta",
+        "local": "árabe",
+        "nivel": "fácil",
+        "autor": "Mohamed"
+    },
+    {
+        "id": "0000012",
+        "titulo": "Leche assada",
+        "ingredientes": "12 ovos; 4 xícaras de leite; 2 xícaras de açúcar granulado",
+        "preparo": "Numa tigela grande, bata os ovos até clarear. Coloque o açúcar e o leite e bata bem. Coloque a mistura numa assadeira e leve ao forno a 200C por uma hora. Deixe esfriar antes de servir.",
+        "categoria": "sobremesa",
+        "local": "boliviana",
+        "nivel": "fácil",
+        "autor": "Mariana"
+    },
+    {
+        "id": "0000013",
+        "titulo": "Majao",
+        "ingredientes": "5 xícaras de água; 225 gramas de carne seca; 1 xícara de arroz; 1/2 xícara de cebola finamente fatiada; 1/2 xícara de tomate, sem pelo, picado; 1/2 xícara de óleo; Páprica dissolvida em 1/2 xícara de água; 1/2 xícara de água; 1 colher de chá de sal",
+        "preparo": "Numa panela grande, coloque as 5 xícaras de água e deixe ferver em fogo alto. Quando atingir fervura, coloque a carne seca e deixe cozinhar até ficar macia. Tire a carne (não jogue fora a água) e passe-a no moedor de carne. Na água da carne, coloque o arroz e o sal e deixe cozinhar por 25 minutos em fogo médio até que o arroz esteja cozido, mas não seco. Reserve. Numa panela menor, aqueça 1/2 de xícara de óleo em fogo médio. Coloque a carne já moída e deixe fritar até dourar. Tire do fogo e reserve. Numa panela, coloque o restante 1/4 de xícara de óleo e aqueça em fogo alto. Adicione a cebola e deixe dourar. Coloque o tomate, a páprica, a 1/2 xícara de água e o sal. Deixe cozinhar por 5 minutos. Adicione então a carne já frita e mexa. Por fim, coloque a mistura da carne na panela com arroz e mexa tudo. Nota: Para um bom resultado, a mistura final não deve ser seca. Se for necessário, adicione um pouco de água.",
+        "categoria": "principal",
+        "local": "boliviana",
+        "nivel": "médio",
+        "autor": "Mariana"
+    },
+    {
+        "id": "0000014",
+        "titulo": "Tawa-tawas",
+        "ingredientes": "2 xícaras de farinha; 2 colheres de chá de fermento em pó; 1 colher de chá de sal; 1 colher de sopa de manteiga; 2 ovos; 1/2 xícara de água ou leite; 2 xícaras de manteiga ou óleo para fritar; 1 xícara de xarope de milho",
+        "preparo": "Numa tigela grande, peneire a farinha, o fermento e o sal. Adicione 1 colher de sopa de manteiga e misture bem. Adicione os ovos e bata levemente. Em seguida, adicione a água ou leite, pouco a pouco, e mexa bem até ficar uma massa macia. Coloque a massa sobre a mesa, polvilhe com um pouco de farinha, e amasse. Deixe a massa descansar por 10 minutos coberta com um pano de prato. Pegue metade da massa e abra até ficar bem fina (cerca de meio centímetro). Corte em forma de losangos médios (uns 5 cm). Cubra os losangos com um pano. Repita o procedimento com a outra metade da massa. Numa panela (ou frigideira) grande, aqueça o óleo ou a manteiga em fogo alto. Frite vários losangos simultaneamente. Quando estiverem dourados de um lado, vire-os e deixe-os dourar do outro lado. Retire os losangos da fritira e coloque-os para secar sobre papel absorvente de cozinha. Depois que todos estiverem fritos, coloque-os numa bandeja e espalhe o xarope de milho por cima de cada um. Se quiser refinar, polvilhe com açúcar de confeiteiro ou refinado por cima.",
+        "categoria": "entrada",
+        "local": "boliviana",
+        "nivel": "fácil",
+        "autor": "Luiza"
+    },
+    {
+        "id": "0000015",
+        "titulo": "Chilli com carne",
+        "ingredientes": "500 gramas de carne bovina em cubos; 500 gramas de carne de porco em cubos; 50 gramas de banha de porco; 1/4 de litro de caldo de carne; 1 dente de alho socado; 1 cebola grande picada; 1/2 kg de tomate cortado; 2 pimentões vermelhos cortados (sem sementes); 20 gramas de amido de milho; 200 gramas de feijão branco (já pronto); 200 gramas de feijão vermelho (já pronto); Cominho em pó a gosto; Chilli em pó a gosto; Sal e pimenta a gosto",
+        "preparo": "Refogue as carnes com a banha e o caldo de carne. Deixe cozinhar com a panela tampada em fogo baixo. Aos poucos, vá acrescentando o chilli, o sal e o alho. Numa outra panela, refogue na banha os tomates, a cebola e os pimentões. Depois de refogados, bata no liquidificador e misture amido de milho até formar um molho grosso. Coloque este molho junto com os feijões e as carnes, misturando bem. Cozinhe por alguns minutos em fogo brando e sirva em seguida.",
+        "categoria": "principal",
+        "local": "mexicana",
+        "nivel": "médio",
+        "autor": "Mariana"
+    },
+    {
+        "id": "0000016",
+        "titulo": "Feijão à Mexicana",
+        "ingredientes": "350 gramas de feijão vermelho (de molho); 500 ml de azeite; 2 dentes de alho picados; 1 cebola picada; 200 gramas de tomate sem pele picado; 400 gramas de carne moída; Sal, pimenta, malagueta e cominho a gosto",
+        "preparo": "Refogue o alho e a cebola com o azeite. Assim que dourar, coloque a carne moída e vá mexendo com colher de pau até que a carne esteja úmida. Coloque o tomate, mexa e deixe cozinha com tampa por 5 minutos, mexendo de vez em quando. Junte um pouco do líquido do feijão cozido, mas apenas para cobrir. Tempere com sal e pimenta e deixe cozinhar por 25 minutos. Escorra o feijão, reservando a água. Coloque o feijão no refogado, cubra com a água reservada, deixe cozinhar lentamente durante 20 minutos. Retifique de temperos, junte a malagueta a gosto e uma pitada de cominho. Sirva com arroz branco.",
+        "categoria": "principal",
+        "local": "mexicana",
+        "nivel": "médio",
+        "autor": "Safira"
+    },
+    {
+        "id": "0000017",
+        "titulo": "Galinha à mexicana",
+        "ingredientes": "3 filés de peito de frango cortados ao meio; 1/2 xícara de suco de limão; 1 colher de sopa de azeite; ½ xícara de cebola picada; 1/2 xícara de pimenta vermelha seca e picada; 2 dentes de alho socados; 2 colheres de sopa de manjericão picado; 1 colher de chá de orégano seco; Sal a gosto",
+        "preparo": "No dia anterior, tempere os filés de frango com suco de limão, azeite, pimenta , alho, manjericão e orégano. Não jogue o molho fora. Asse os filés de frango na brasa. Bata o molho do tempero do frango no liquidificador e depois coe. Em seguida, cozinhe o molho batido por 5 minutos. Sirva o frango com o molho por cima.",
+        "categoria": "principal",
+        "local": "mexicana",
+        "nivel": "médio",
+        "autor": "Juliana"
+    },
+    {
+        "id": "0000018",
+        "titulo": "Guacamole",
+        "ingredientes": "1 abacate; 1 cebola média picada; 1 dente de alho socado; 3 pimentas vermelhas picadas; Suco de 1 limão; Sal e pimenta a gosto",
+        "preparo": "Pique o abacate (sem a casca) e coloque o alho , a cebola e a pimenta vermelha. Misture bem e depois tempere com o suco de limão, sal e pimenta do reino",
+        "categoria": "pasta",
+        "local": "mexicana",
+        "nivel": "fácil",
+        "autor": "Maurice"
+    },
+    {
+        "id": "0000019",
+        "titulo": "Croissant",
+        "ingredientes": "4kg de farinha de trigo; 200g de margarina; 200g de fermento biológico fresco; 200g de açúcar; 8 ovos; 80g de sal; 1800ml de água 2kg de margarina especial para folhamento;",
+        "preparo": "Colocar todos os ingredientes na batedeira e bater durante 10 minutos até formar uma massa homogênea e enxuta. Fazer uma bola e deixar descansar por 15 minutos. Em seguida, abrir a massa em forma de um retângulo e preencher 2/3 da massa com a margarina especial. Dar três dobras de 3, descansar por 10 minutos. Modelar no tamanho desejado. Fermentar até o ponto de forno. Fornear a 220ºC.",
+        "categoria": "pão",
+        "local": "francesa",
+        "nivel": "difícil",
+        "autor": "Maurice"
+    },
+    {
+        "id": "0000020",
+        "titulo": "Pão de queijo mineiro",
+        "ingredientes": "1500 g de Fécula de Mandioca; 500 g de polvilho Azedo; 1kg de queijo meia cura ralado; 10 ovos; 40 g de sal; 1 litro de leite",
+        "preparo": "Colocar na batedeira a fécula, polvilho, queijo e o sal e bater em primeira velocidade de 3 (três) a 4 (quatro) minutos. Acrescentar a gordura, os ovos e bater em segunda velocidade por três minutos. Colocar o leite aos poucos até obter uma massa homogênea. Bolear em tamanho desejado e fornear em temperatura 200 º C",
+        "categoria": "pão",
+        "local": "mineira",
+        "nivel": "fácil",
+        "autor": "Sabrina"
+    },
+    {
+        "id": "0000021",
+        "titulo": "Bobó de camarão",
+        "ingredientes": "500 g de camarão limpo e sem casca; 500 g de mandioca cozida em pedaços médios; 100 ml de leite de coco; 1 colher (sopa) de coentro picado; 1 cebola picada; 50 ml de azeite; 50 ml de azeite de dendê; 2 unidades de tomate sem pele e sem semente",
+        "preparo": "Tendo a mandioca cozida em água e sal, retire o fio central e faça um purê com um pouco da água. Reserve. Salteie os camarões (temperados com sal e pimenta branca) no azeite de oliva e na cebola. Reserve. Na mesma panela (com o resíduo de azeite), adicione o tomate sem pele e refogue. Envolva o camarão, acrescente o purê da mandioca, o coentro e alterne o azeite de dendê e o leite de coco.",
+        "categoria": "principal",
+        "local": "baiana",
+        "nivel": "médio",
+        "autor": "Adriana"
+    },
+    {
+        "id": "0000022",
+        "titulo": "Siri Mole ao Coco",
+        "ingredientes": "300 g de carne de siri mole; Suco de 1 limão; Sal a gosto; 1 colher sopa de azeite; 1 cebola picada; 1 tomate picado; 1 colher de chá de coentro picado; 1 pimentão picado; 1/3 xícara de chá de leite de coco",
+        "preparo": "Escalde os siris, colocando-os em água fervente. Deixe esfriar e tempere com o limão e o sal. Em uma panela, aqueça o azeite e refogue o siri, a cebola, o tomate, o coentro e o pimentão e deixe cozinhar por 10 minutos. Adicione o leite de coco e cozinhe por 5 minutos e reserve. Em uma panela, derreta a margarina e misture a farinha de mandioca, mexendo bem, até obter uma farofa encorpada. Sirva com o siri.",
+        "categoria": "principal",
+        "local": "maceioense",
+        "nivel": "média",
+        "autor": "Larissa Yasmin"
+    },
+    {
+        "id": "0000023",
+        "titulo": "Caldo de sururu",
+        "ingredientes": "1 kg de sururu; 1 cebola cortada em pedaços pequenos; 1 tomate cortado em pedaços pequenos; 1 maço de coentro bem picado;   50 ml de azeite de dendê; 200 ml de leite de coco; 200g de amendoim torrado; 200 g de camarão seco; 4 colheres de sopa de azeite; Sal a gosto",
+        "preparo": "Refogue a cebola, o tomate e o sururu previamente temperado no azeite. Adicone água, um pouco de sal e espere que levante fervura. Bata os ingredientes anteriores no liquidificador, junto ao camarão e amendoim e depois devolva à panela, onde irá adicionar o leite de coco. Cozinhe por mais dez minutos e acrescente o coentro e o azeite de dendê para finalizar. ",
+        "categoria": "caldo",
+        "local": "baiana",
+        "nivel": "médio",
+        "autor": "Tatiane"
+    }
+]
