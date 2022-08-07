@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,38 +12,39 @@
     <link rel="stylesheet" href="/css/receita-individual.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <title> <%= title %>  </title>
+    <title>
+        <%= title %>
+    </title>
 </head>
+
 <body>
     <header class="header">
-        <%- include("header")  %> 
-        <div class="titleMenu center-block">
-            <h1 class="pageName"><strong>Saladas de folhas verdes</strong></h1> 
-            <hr>
-        </div>
+        <%- include("header") %>
+            <div class="titleMenu center-block">
+                <h1 class="pageName"><strong>Saladas de folhas verdes</strong></h1>
+                <hr>
+            </div>
     </header>
 
     <main>
         <div class="block1">
             <div class="left">
-                <!-- <div class="design">
-                    <img src="/images/recipe-img.png" id="design">
-                    <div class="recipe"> -->
-                        <img src="/images/salada.png" alt="Foto da receita" id="recipe">
-                    <!-- </div>
-                </div> -->
+                <img src="/images/salada.png" alt="Foto da receita" id="recipe">
                 <h2 class="title">Ingredientes</h2>
                 <ul>
                     <li>1 Pé de Alface Americana </li>
                     <li>Meio pé de alface crespa</li>
                     <li>Um punhado de rúcula</li>
-                    <li>250g  de tomates cereja</li>
-                    <li>Queijo minas fresco  a gosto (Usei 250gr)</li>
+                    <li>250g de tomates cereja</li>
+                    <li>Queijo minas fresco a gosto (Usei 250gr)</li>
                     <li>1 Manga Palmer </li>
                 </ul>
             </div>
             <div class="right">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/S5_o5Y2dRJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/S5_o5Y2dRJY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
         <div class="block2">
@@ -56,16 +58,18 @@
             </ol>
             <h2 class="title">Dicas</h2>
             <p class="paragraph">
-                O molho para saladas é mera questão de gosto. Há várias receitas no Cyber Cook: todas fáceis de fazer. No entanto, pode temperá-las apenas com sal, azeite e vinagre ou limão, também.
+                O molho para saladas é mera questão de gosto. Há várias receitas no Cyber Cook: todas fáceis de fazer.
+                No entanto, pode temperá-las apenas com sal, azeite e vinagre ou limão, também.
             </p>
         </div>
         <div class="rating">
             <h3 class="title-rating">Nos ajude avaliando</h3>
         </div>
     </main>
-   
+
     <footer>
-        <%- include("footer") %> 
+        <%- include("footer") %>
     </footer>
 </body>
+
 </html>
