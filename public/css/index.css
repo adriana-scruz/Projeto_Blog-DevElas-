@@ -19,6 +19,7 @@ hr{
     padding: 0 3%;
 }
 
+<<<<<<< HEAD
 main{
     width: 81%;
     margin: 0 auto 5%;
@@ -63,3 +64,14 @@ main{
     box-shadow: 5px 5px 5px 0px #00000060;
 }
 
+=======
+.container {
+    width: 70%;
+}
+
+.card {
+    border-color:rgba(0, 0, 0, 0);
+    padding: 2%;
+    background-color: rgba(255, 228, 196, 0);
+}
+>>>>>>> b9c4ca4d57e2e6cbe8b449ccc82a239655e04704
