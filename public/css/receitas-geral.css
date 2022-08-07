@@ -1,5 +1,9 @@
+body{
+    background-color: #FBF6F3;
+}
+
 .col {
-    background-color: primary-color;
+    background-color: #FFECE1;
     position: relative;
     display: grid;
     grid-template-columns: 300px 600px;
@@ -40,6 +44,7 @@ img {
 
 .container__text {
   padding: 40px 40px 0;
+  background-color: #FFECE1;
 }
 
 .container.h1 {
