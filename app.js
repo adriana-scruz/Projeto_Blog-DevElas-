@@ -1,33 +1,84 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const bodyParser= require('body-parser')
 const port = 3000;
 
 const fs = require('fs')
 
-function novaReceita(receita){
-    let rawdata = fs.readFileSync('./receitas.json');
-    //parsing o arquivo JSON em um objeto JS
-    let colecaoReceitas = JSON.parse(rawdata);
-    colecaoReceitas.push(receita)
-    let data = JSON.stringify(colecaoReceitas);
-    fs.writeFileSync('./receitas.json', data);
-    return colecaoReceitas
-}
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(bodyParser.urlencoded({ extended: true }))
+app.get("/adicao_receita", (req, res) => {
+  res.render("adicao_receita", {
+    title: "Nova receita",
+    links: [
+      { href: "/index", label: "Home"},
+      { href: "/receitas", label: "Receitas"},
+      { href: "/destaques", label: "Destaques"}
+    ]
+  });
+});
 
-app.get('/', (req,res) =>{
-    res.sendFile(__dirname + '/index.html')
+app.get("/destaques", (req, res) => {
+  res.render("destaques", {
+    title: "Destaques",
+    links: [
+      { href: "/index", label: "Home"},
+      { href: "/receitas", label: "Receitas"},
+      { href: "/destaques", label: "Destaques"}
+    ]
+  });
+});
+
+app.get("/edicao_receita", (req, res) => {
+  res.render("edicao_receita", {
+    title: "Editar receita",
+    links: [
+      { href: "/index", label: "Home"},
+      { href: "/receitas", label: "Receitas"},
+      { href: "/destaques", label: "Destaques"}
+    ]
+  });
+});
+
+app.get("/index", (req, res) => {
+  res.render("index", {
+    title: "Página inicial",
+    links: [
+      { href: "/index", label: "Home"},
+      { href: "/receitas", label: "Receitas"},
+      { href: "/destaques", label: "Destaques"}
+    ]
+  });
+});
+
+
+
+app.get("/receitas-individual", (req, res) => {
+  res.render("receitas-individual", {
+    title: "Receita",
+    links: [
+      { href: "/index", label: "Home"},
+      { href: "/receitas", label: "Receitas"},
+      { href: "/destaques", label: "Destaques"}
+    ]
+  });
+});
+
+app.get("/receitas", (req, res) => {
+  res.render("receitas", {
+    title: "Receitas",
+    links: [
+      { href: "/index", label: "Home"},
+      { href: "/receitas", label: "Receitas"},
+      { href: "/destaques", label: "Destaques"}
+    ]
+  });
+});
+
+
+app.listen(port, () => {
+  console.log(`Server running at ${port}`)
 })
-
-app.post('/novoPost', (req, res) => {
-    console.log('Post funciona!');
-    const colecaoReceitas = novaReceita(req.body);
-    res.send(colecaoReceitas)
-    //res.send(req.body)
-  })
-
-app.listen(port, function() {
-    console.log('listening on 3000')
-  })
