@@ -10,6 +10,13 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Rotas
+require("./routes/app.routes")(app);
+
+/*
 app.get("/adicao_receita", (req, res) => {
   res.render("adicao_receita", {
     title: "Nova receita",
@@ -43,41 +50,7 @@ app.get("/edicao_receita", (req, res) => {
   });
 });
 
-app.get("/", (req, res) => {
-  res.render("index", {
-    title: "Página inicial",
-    links: [
-      { href: "/", label: "Home"},
-      { href: "/receitas", label: "Receitas"},
-      { href: "/destaques", label: "Destaques"}
-    ]
-  });
-});
-
-
-
-app.get("/receitas-individual", (req, res) => {
-  res.render("receitas-individual", {
-    title: "Receita",
-    links: [
-      { href: "/", label: "Home"},
-      { href: "/receitas", label: "Receitas"},
-      { href: "/destaques", label: "Destaques"}
-    ]
-  });
-});
-
-app.get("/receitas", (req, res) => {
-  res.render("receitas", {
-    title: "Receitas",
-    links: [
-      { href: "/", label: "Home"},
-      { href: "/receitas", label: "Receitas"},
-      { href: "/destaques", label: "Destaques"}
-    ]
-  });
-});
-
+*/
 
 app.listen(port, () => {
   console.log(`Server running at ${port}`)
