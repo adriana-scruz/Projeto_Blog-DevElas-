@@ -31,82 +31,45 @@
     </header>
     <main>
 
-        <div class="container">
-            <div class="row">
-              <div class="col">
-                <img
-             src="/images/receitas/teste.png"
-             alt="Pancake"
+      <div class="container">
+        <div class="row">
+          <% receitas.forEach(receita => { %>
+          <div class="col">
+            <img
+              src="/images/receitas/<%=receita.image %>"
+              alt="Foto de uma receita de <%=receita.titulo %>"
             />
             <div class="container__text">
-             <h1>Saladas de folhas verdes</h1>
-             <div class="container__text__star">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-             </div>
-             <p class="descricao">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-             </p>
-             <div class="container__text__timing">
-              <div class="container__text__timing_time">
-               <h2>Tempo de Cozimento</h2>
-               <p>30 min</p>
+              <h1><%=receita.titulo %></h1>
+              <div class="container__text__star">
+                <%for(let i =0; i<parseInt(receita.stars);i++){ %> 
+                  <span class="fa fa-star checked"></span>
+                <%}%>
               </div>
-              <div class="container__text__timing_time">
-               <h2>Tempo total</h2>
-               <p>40 min</p>
+              <h2>Ingredientes:</h2>
+              <p class="descricao">
+                <%=receita.ingredientes %>
+              </p>
+              <div class="container__text__timing">
+                <div class="container__text__timing_time">
+                <h2>Culinária (local)</h2>
+                <p><%=receita.local %></p>
+                </div>
+                <div class="container__text__timing_time">
+                <h2>Nível</h2>
+                <p><%=receita.nivel %></p>
+                </div>
+                <div class="container__text__timing_time">
+                <h2>Autor</h2>
+                <p><%=receita.autor %></p>
+                </div>
               </div>
-              <div class="container__text__timing_time">
-               <h2>QTD Pessoas</h2>
-               <p>5 pessoas</p>
-              </div>
-             </div>
-             <button class="btn">Acesse</button>
-            </div>
-              </div>
-              <div class="col">
-                <img
-             src="/images/receitas/teste.png"
-             alt="Pancake"
-            />
-            <div class="container__text">
-             <h1>Saladas de folhas verdes</h1>
-             <div class="container__text__star">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-             </div>
-             <p class="descricao">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-             </p>
-             <div class="container__text__timing">
-              <div class="container__text__timing_time">
-               <h2>Tempo de Cozimento</h2>
-               <p>30 min</p>
-              </div>
-              <div class="container__text__timing_time">
-               <h2>Tempo total</h2>
-               <p>40 min</p>
-              </div>
-              <div class="container__text__timing_time">
-               <h2>QTD Pessoas</h2>
-               <p>5 pessoas</p>
-              </div>
-             </div>
-             <button class="btn">Acesse</button>
-            </div>
-              </div>
+              <button class="btn"><a href="/receita-individual/<%= receita.id %>">Acesse</a></button>
             </div>
           </div>
-      
-        <div class="container">
-            
-           </div>
+          <% }); %>
+        </div>
+      </div>
       
     </main>
     <footer><%- include("footer")%></footer>

@@ -21,36 +21,61 @@
             <hr>
         </div>
     </header>
-    <form action="post">
+    <form action="/save_receita" method="POST">
         <div class="form-group uploadImg">
             <label for="uploadImage">Adicione a foto de sua receita</label>
             <label for="uploadImage"><img src="/images/upload.jpg" alt="Faça o upload da foto da receita" id="upload"></label>
             <input type="file" name="image" id="uploadImage">
         </div>
         <div class="form-group">
-            <label for="recipeTitle">Título da receita</label>
-            <input type="text" name="recipeTitle" id="recipeTitle" class="form-control" placeholder="Escreva o título de sua receita">
+            <label for="titulo">Título da receita</label>
+            <input type="text" name="titulo" id="recipeTitle" class="form-control" placeholder="Escreva o título de sua receita">
         </div>
         <div class="form-group">
-            <label for="author">Autor da receita</label>
-            <input type="text" name="author" id="author" class="form-control" placeholder="Escreva o seu nome">
+            <label for="autor">Autor da receita</label>
+            <input type="text" name="autor" id="author" class="form-control" placeholder="Escreva o seu nome">
         </div>
         <div class="form-group">
             <label for="url">Url do vídeo</label>
             <input type="text" name="url" id="url" class="form-control" placeholder="Adicione o link do youtube">
         </div>
         <div class="form-group">
-            <label for="ingredients">Ingredientes</label>
-            <textarea name="ingredients" id="ingredients" cols="40" rows="7" class="form-control" placeholder="Adicione os ingredientes aqui"></textarea>
+            <label for="categoryID">Categoria da Receita</label>
+            <select class="form-select" aria-label="Default select example" name="categoryID">
+                <option selected name="categoryID">Selecione a categoria da receita</option>
+                <% categories.forEach(category => { %>
+                    <option value="<%= category.id %>"><%= category.name %></option>
+                  <% }) %> 
+              </select>
         </div>
         <div class="form-group">
-            <label for="steps">Adicione os passos</label>
-            <textarea name="steps" id="steps" cols="40" rows="7" class="form-control" placeholder="Como realizar sua receita?"></textarea>
+            <label for="nivel">Nível de Dificuldade da Receita</label>
+            <select class="form-select" aria-label="Default select example" name="nivel">
+                <option selected>Selecione o nível de dificuldade da receita </option>
+                <option value="Fácil">Fácil</option>
+                <option value="Médio">Médio</option>
+                <option value="Difícil">Difícil</option>
+              </select>
         </div>
+        
+        <div class="form-group">
+            <label for="local">Culinária/região da Receita</label>
+            <input type="text" name="local" id="url" class="form-control" placeholder="Escreva a região de origem da sua receita">
+        </div>
+        <div class="form-group">
+            <label for="ingredientes">Ingredientes</label>
+            <textarea name="ingredientes" id="ingredients" cols="40" rows="7" class="form-control" placeholder="Adicione os ingredientes aqui"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="preparo">Adicione os passos</label>
+            <textarea name="preparo" id="steps" cols="40" rows="7" class="form-control" placeholder="Como realizar sua receita?"></textarea>
+        </div>
+        <!--
         <div class="form-group">
             <label for="tips">Dicas</label>
             <textarea name="tips" id="tips" cols="40" rows="7" class="form-control" placeholder="Dê dicas sobre a sua receita"></textarea>
         </div>
+        -->
         <div class="button-send">
             <button type="submit" class="btn btn-send">Salvar</button>
         </div>

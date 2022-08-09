@@ -21,7 +21,7 @@
     <header class="header">
         <%- include("header") %>
             <div class="titleMenu center-block">
-                <h1 class="pageName"><strong>Saladas de folhas verdes</strong></h1>
+                <h1 class="pageName"><strong><%= receita.titulo%></strong></h1>
                 <hr>
             </div>
     </header>
@@ -29,15 +29,13 @@
     <main>
         <div class="block1">
             <div class="left">
-                <img src="/images/salada.png" alt="Foto da receita" id="recipe">
+                <img
+              src="/images/receitas/<%=receita.image %>"
+              alt="Foto de uma receita de <%=receita.titulo %>"
+            />
                 <h2 class="title">Ingredientes</h2>
                 <ul>
-                    <li>1 Pé de Alface Americana </li>
-                    <li>Meio pé de alface crespa</li>
-                    <li>Um punhado de rúcula</li>
-                    <li>250g de tomates cereja</li>
-                    <li>Queijo minas fresco a gosto (Usei 250gr)</li>
-                    <li>1 Manga Palmer </li>
+                    <li><%= receita.ingredientes  %> </li>
                 </ul>
             </div>
             <div class="right">
@@ -50,17 +48,8 @@
         <div class="block2">
             <h2 class="title">Como fazer</h2>
             <ol>
-                <li>Em uma tigela larga coloque as folhas lavadas e secas.</li>
-                <li>Você pode rasgar as folhas para que elas se misturem melhor.</li>
-                <li>Distribua os cubinhos de tomate e as nozes por cima das folhas.</li>
-                <li>Na hora de servir, em um potinho separado, misture o azeite, o vinagre, o sal e a pimenta.</li>
-                <li>Misture bem e jogue o molho por cima de toda salada.</li>
+                <li><%=receita.preparo%> </li>
             </ol>
-            <h2 class="title">Dicas</h2>
-            <p class="paragraph">
-                O molho para saladas é mera questão de gosto. Há várias receitas no Cyber Cook: todas fáceis de fazer.
-                No entanto, pode temperá-las apenas com sal, azeite e vinagre ou limão, também.
-            </p>
         </div>
         <div class="rating">
             <h3 class="title-rating">Nos ajude avaliando</h3>
