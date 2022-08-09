@@ -21,7 +21,7 @@
             <hr>
         </div>
     </header>
-    <form action="/save_receita" method="POST">
+    <form action="/save_receita" method="POST" enctype="multipart/form-data">
         <div class="form-group uploadImg">
             <label for="uploadImage">Adicione a foto de sua receita</label>
             <label for="uploadImage"><img src="/images/upload.jpg" alt="Faça o upload da foto da receita" id="upload"></label>
@@ -60,7 +60,7 @@
         
         <div class="form-group">
             <label for="local">Culinária/região da Receita</label>
-            <input type="text" name="local" id="url" class="form-control" placeholder="Escreva a região de origem da sua receita">
+            <input type="text" name="local" id="local" class="form-control" placeholder="Escreva a região de origem da sua receita">
         </div>
         <div class="form-group">
             <label for="ingredientes">Ingredientes</label>
