@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/bootstrap-5.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/new-recipe.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title> <%= title %>  </title>
+</head>
+<body>
+    <header class="header">
+        <%- include("header")  %> 
+        <div class="titleMenu center-block">
+            <h1 class="pageName">Nova <strong>receita</strong></h1>
+            <hr>
+        </div>
+    </header>
+    <form action="post">
+        <div class="form-group uploadImg">
+            <label for="uploadImage">Adicione a foto de sua receita</label>
+            <label for="uploadImage"><img src="/images/upload.jpg" alt="Faça o upload da foto da receita" id="upload"></label>
+            <input type="file" name="image" id="uploadImage">
+        </div>
+        <div class="form-group">
+            <label for="recipeTitle">Título da receita</label>
+            <input type="text" name="recipeTitle" id="recipeTitle" class="form-control" placeholder="Escreva o título de sua receita">
+        </div>
+        <div class="form-group">
+            <label for="author">Autor da receita</label>
+            <input type="text" name="author" id="author" class="form-control" placeholder="Escreva o seu nome">
+        </div>
+        <div class="form-group">
+            <label for="url">Url do vídeo</label>
+            <input type="text" name="url" id="url" class="form-control" placeholder="Adicione o link do youtube">
+        </div>
+        <div class="form-group">
+            <label for="ingredients">Ingredientes</label>
+            <textarea name="ingredients" id="ingredients" cols="40" rows="7" class="form-control" placeholder="Adicione os ingredientes aqui"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="steps">Adicione os passos</label>
+            <textarea name="steps" id="steps" cols="40" rows="7" class="form-control" placeholder="Como realizar sua receita?"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="tips">Dicas</label>
+            <textarea name="tips" id="tips" cols="40" rows="7" class="form-control" placeholder="Dê dicas sobre a sua receita"></textarea>
+        </div>
+        <div class="button-send">
+            <button type="submit" class="btn btn-send">Salvar</button>
+        </div>
+    </form>
+    <footer>
+        <%- include("footer") %> 
+    </footer>
+    <script type="text/javascript" src="/js/fileUpload.js"></script>
+</body>
+</html>

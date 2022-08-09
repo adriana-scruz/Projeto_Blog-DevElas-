@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #FBF6F3;
+}
+
+body{
+    background-color: #FBF6F3; 
+}
+
+form{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.uploadImg > label{
+    display: block;
+}
+
+label{
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 900;
+    line-height: 46px;
+    color: #000000;
+    font-size: large;
+    font-size: 3vh;
+}
+
+.form-control{
+    background: #F8F8F8;
+    border: 2.5px solid #393939;
+    border-radius: 6px;
+}
+
+.form-group{
+    padding-bottom: 1.5%;
+}
+input::placeholder, textarea::placeholder{
+    font-family: 'Karla', sans-serif;
+}
+
+.button-send{
+    display: flex;
+    justify-content: right;
+}
+
+.btn{
+    margin-bottom: 7%;
+    margin-top: 2%;
+}
+
+.btn-send{
+    background-color: #FD5D5D;
+    color: white;
+    font-family: 'Lora', sans-serif;
+    padding: 0.5% 2%; 
+}
+
+.btn-send:hover{
+    background-color: #F85151;
+    color: white;
+}
+
+.img >{
+    display: block;
+}
+
+#upload{
+    border: 2.5px solid #393939;
+    border-radius: 10px;
+    height: 15vw;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.uploadImg > input{
+    display: none;
+}

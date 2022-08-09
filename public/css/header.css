@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-logo{
+    display: flex;
+    padding-top: 30px;
+    margin: 0 40px;
+    height: 300px;
+    justify-content: space-around;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    border: 4px solid #393939;
+    border-radius: 13px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin: auto 8%;
+}
+
+.menu a{
+    width: 32%;
+    display: flex;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    color: #494949;
+    padding: 10px;
+    margin-right: 15px;
+    justify-content: center;
+}
+
+a:hover{
+    background-color: #FD5D5D;
+    border-radius: 10px;
+    color: white;
+}
+
+.logo{
+    height: 250px;
+    width: 280px;
+    padding: 0;
+}
+
+.btn-menu{
+    background-color: #FD5D5D;
+    color: white;
+    font-family: 'Lora', sans-serif;
+    padding: 4px 23px; 
+    height: 35px;
+    margin: auto 20px;
+    border: none;
+    border-radius: 6px;
+}
+
+.btn-menu:hover{
+    background-color: #F85151;
+    color: white;
+}
+
+.button{
+    width: 280px;
+    display: flex;
+}
+
+.pageName{
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 4em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-bottom: 2%;
+}
+
+.titleMenu{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5% 0;
+}
+
+hr{
+    width: 80%;
+    border: 2px solid #000000;
+}
+
+.center-block, hr{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
