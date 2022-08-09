@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    margin-left: 20px;
     margin: 0;
     padding: 0;
 }
@@ -7,7 +8,8 @@
 .menu-logo{
     display: flex;
     padding-top: 30px;
-    margin: 0 40px;
+    margin-left: 10%;
+    margin-right: 3%;
     height: 300px;
     justify-content: space-around;
 }
@@ -43,14 +45,16 @@ a:hover{
 }
 
 .logo{
-    height: 250px;
-    width: 280px;
+    margin-top: 100px;
+    height: 80px;
+    width: 250px;
     padding: 0;
 }
 
 .btn-menu{
-    background-color: #FD5D5D;
-    color: white;
+    background-color: #393939;
+    text-decoration: none;
+    color: aliceblue;
     font-family: 'Lora', sans-serif;
     padding: 4px 23px; 
     height: 35px;
@@ -62,6 +66,10 @@ a:hover{
 .btn-menu:hover{
     background-color: #F85151;
     color: white;
+}
+
+.btn-menu:visited{
+    color: aliceblue;
 }
 
 .button{

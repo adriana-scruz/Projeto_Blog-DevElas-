@@ -86,7 +86,7 @@ exports.saveReceita = (req, res) => {
       });
     }
     
-    const imagesPath = path.join(__dirname, "../public/images", files.image.newFilename);
+    const imagesPath = path.join(__dirname, "../public/images/fotos", files.image.newFilename);
 
     const receita = { ...fields, image: files.image.newFilename };
     

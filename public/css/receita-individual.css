@@ -44,10 +44,31 @@ li, .paragraph{
     color: #000000;
     font-size: 2.5vh;
     text-align: left;
+    padding: 5%;
 }
 
 .block2{
     padding: 0 1.5%;
+}
+
+#botaoeditar {
+    background-color: #01B057;
+    border: none;
+}
+
+#botaoeditar:hover {
+    background-color: #088042;
+    border: none;
+}
+
+#botaodeletar {
+    background-color: #FD5D5D;
+    border: none;
+}
+
+#botaodeletar:hover {
+    background-color: #c14242;
+    border: none;
 }
 
 footer{

@@ -35,7 +35,7 @@ SELECT * FROM receitas;
 SELECT * FROM categories;
 
 INSERT INTO receitas (titulo, image, ingredientes, preparo, categoryID, local, nivel, autor)
-VALUES('Babaganuche','../images/babaganouche.png','2 berinjelas grandes e picadas. 1 cebola grande e picada. 2 cabeças de alho.
+VALUES('Babaganuche','babaganouche.png','2 berinjelas grandes e picadas. 1 cebola grande e picada. 2 cabeças de alho.
 2 colheres de sopa de azeite. 1 colher de sopa de orégano.
 1 colher de sopa de manjericão. Sal e pimenta a gosto',
 'Refogue as berinjelas no azeite com a cebola e o alho. 
@@ -45,7 +45,7 @@ Sirva com torradas ou pão sírio torrado.',
 '1','árabe','Fácil','Mohamed');
 
 INSERT INTO receitas (titulo, image, ingredientes, preparo, categoryID, local, nivel, autor,stars)
-VALUES('Charuto','../images/charuto.jpg','1 repolho médio. 1/2 kg carne moída.
+VALUES('Charuto','charuto.jpg','1 repolho médio. 1/2 kg carne moída.
 1/2 kg arroz. 2 tomates médios. Extrato de tomate a gosto sal,
 pimenta, cebola, alho e outros condimentos à gosto',
 'Cozinhe o repolho em uma panela que o caiba de modo que
