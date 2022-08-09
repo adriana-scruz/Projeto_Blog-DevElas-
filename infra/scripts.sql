@@ -20,7 +20,7 @@ DROP TABLE IF EXISTS receitas;
 CREATE TABLE receitas(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     titulo TEXT NOT NULL,
-    url TEXT,
+    url TEXT DEFAULT "https://www.youtube.com/embed/S5_o5Y2dRJY",
     image TEXT NOT NULL,
     ingredientes TEXT NOT NULL,
     preparo TEXT NOT NULL,
