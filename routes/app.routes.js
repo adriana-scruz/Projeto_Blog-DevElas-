@@ -20,7 +20,7 @@ module.exports = (app) => {
     app.post("/save_receita", (req, res) => receitasController.saveReceita(req, res));
     
     app.get("/edicao_receita/:id", (req, res) => receitasController.getEdtReceitasForm(req, res));
-    app.put("/receita_editada/:id", (req, res) => receitasController.editeReceita(req,res));
+    app.post("/receita_editada/:id", (req, res) => receitasController.editeReceita(req,res));
 
     //app.get("/edicao_receita/:id", (req, res) => {
     //  res.render("edicao_receita", {

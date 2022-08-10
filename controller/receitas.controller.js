@@ -124,33 +124,49 @@ exports.getEdtReceitasForm = (req, res) => {
   })};
 
 exports.editeReceita = (req, res) => {
+  const id = req.params.id;
   const formData = new formidable.IncomingForm();
-  
-  formData.parse(req, (err, fields, files) => {
-    console.log(fields)
+
+  receitasDAO.findById(id, (err, row)=> {
     if (err) {
       return res.status(500).json({
-        errorMessage: "Algo errado aconteceu.",
+        errorMessage: "Houve um erro ao consultar uns dados.",
         err: err
       });
     }
-    
-    const imagesPath = path.join(__dirname, "../public/images/fotos", files.image.newFilename);
 
-    const receita = { ...fields, image: files.image.newFilename };
-    
-    receitasDAO.editeReceita(receita, (err) => {
+    if (!row) {
+      return res.status(500).json({
+        errorMessage: "Produto não encontrado.",
+        err: err
+      });
+    }
+
+    formData.parse(req, (err, fields, files) => {
       if (err) {
         return res.status(500).json({
-          errorMessage: "Erro ao salvar os dados.",
+          errorMessage: "Algo errado aconteceu.",
+          err: err
+        });
+      }
+      
+      const imagesPath = path.join(__dirname, "../public/images/fotos", files.image.newFilename);
+      const receita = { ...row, ...fields, image: files.image.newFilename};
+      
+
+    receitasDAO.editeReceita(id, receita, (err) => {
+      if (err) {
+        return res.status(500).json({
+          errorMessage: "Houve um erro ao consultar uns dados.",
           err: err
         });
       }
 
-      // Salva a imagem no caminho definido, apenas após obter sucesso ao salvar no banco
       fs.renameSync(files.image.filepath, imagesPath);
-  
       return res.redirect("/receitas");
+
     });
+
   })
-}
+  
+})}

@@ -51,33 +51,27 @@ class receitasDAO {
     );
   }
 
-
-editeReceita(receita, callback) {
-  const {
-    titulo,
-    url,
-    image,
-    ingredientes,
-    preparo,
-    categoryID,
-    local,
-    nivel,
-    autor,
-  } = receita;
-
-  this.db.run(
-    `UPDATE receitas SET image = ?, titulo = ?, autor = ?, url = ?, ingredientes = ?, preparo = ?`,
-    [
-      image,
+  editeReceita(id, receita, callback) {
+    const {
       titulo,
-      autor,
       url,
+      image,
       ingredientes,
-      preparo      
-    ],
-    callback
-  );
-}
+      preparo,
+      categoryID,
+      local,
+      nivel,
+      autor,
+    } = receita;
+
+    const sql = `UPDATE receitas SET image = ?, titulo = ?, autor = ?, url = ?, ingredientes = ?, preparo = ?`;
+
+    this.db.run(
+      sql,
+      [image, titulo, autor, url, ingredientes, preparo],
+      callback
+    );
+  }
 }
 
 module.exports = (conn) => {
