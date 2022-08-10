@@ -125,7 +125,7 @@ exports.getEdtReceitasForm = (req, res) => {
 
 exports.editeReceita = (req, res) => {
   const formData = new formidable.IncomingForm();
-  console.log(formData);
+  
   formData.parse(req, (err, fields, files) => {
     console.log(fields)
     if (err) {
