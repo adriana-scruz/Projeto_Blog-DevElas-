@@ -72,6 +72,11 @@ class receitasDAO {
       callback
     );
   }
+
+  deleteReceita(id, callback) {
+    this.db.run(`DELETE FROM receitas WHERE id = ?`, id, callback);
+  }
+
 }
 
 module.exports = (conn) => {

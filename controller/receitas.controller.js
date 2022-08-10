@@ -168,5 +168,47 @@ exports.editeReceita = (req, res) => {
     });
 
   })
+
+
   
 })}
+
+exports.getDeleteReceitaForm = (req, res) => {
+  const id = req.params.id;
+  receitasDAO.findById(id,(err, rows) => {
+    if (err) {
+      return res.json({ message: "Houve um erro ao consultar os dados", err });
+    }
+    res.render("delete_receita", {
+      title: "Deletar receita",
+      links: [
+        { href: "/", label: "Home" },
+        { href: "/receitas", label: "Receitas" },
+        { href: "/categorias", label: "Categorias" },
+      ],
+      receita: rows,
+    });
+  });
+};
+
+exports.deleteReceita = (req, res) => {
+  const formData = new formidable.IncomingForm();
+  formData.parse(req, (err, fields, files) => {
+    if (err) {
+      return res.status(500).json({
+        errorMessage: "Algo inesperado aconteceu.",
+        err: err
+      });
+    }
+    const id = parseInt(fields.id);
+    console.log(id)
+
+    receitasDAO.deleteReceita(id,(err) => {
+      if (err) {
+        return res.json({ message: "Houve um erro ao deletar a receita", err });
+      }
+      res.status(204).redirect('/receitas')
+    });
+  })
+};
+

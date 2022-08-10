@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/bootstrap-5.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/new-recipe.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title> <%= title %>  </title>
+</head>
+<body>
+    <header class="header">
+        <%- include("header")  %> 
+        <div class="titleMenu center-block">
+            <h1 class="pageName">Deletar <strong>receita</strong></h1>
+            <hr>
+        </div>
+    </header>
+    <form action="/receita_excluida?_method=DELETE" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="recipeTitle">Deseja realmente deletar a receita de <%= receita.titulo%> de <%= receita.autor%>?</label>
+        </div>
+        <!---
+        <div class="form-group">
+            <label for="id">Confirme o id da receita</label>
+            <input type="number" name="id" id="recipeTitle" class="form-control" placeholder="número [1,2...]">
+        </div>
+        -->
+        <input type="hidden" name="id" value ="<%=receita.id  %> "/>
+        <div class="button-send">
+            <button type="submit" class="btn btn-send">Deletar</button>
+        </div>
+    </form>
+    <footer>
+        <%- include("footer") %> 
+    </footer>
+    <script type="text/javascript" src="/js/fileUpload.js"></script>
+</body>
+</html>
