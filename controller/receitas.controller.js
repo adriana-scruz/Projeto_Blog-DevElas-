@@ -121,8 +121,7 @@ exports.getEdtReceitasForm = (req, res) => {
       ],
       receita: rows,
     });
-  });
-}
+  })};
 
 exports.editeReceita = (req, res) => {
   const formData = new formidable.IncomingForm();
