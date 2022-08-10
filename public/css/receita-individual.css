@@ -52,8 +52,14 @@ li, .paragraph{
 }
 
 #botaoeditar {
+    
     background-color: #01B057;
     border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 #botaoeditar:hover {
@@ -61,9 +67,21 @@ li, .paragraph{
     border: none;
 }
 
+#botaoeditar:visited {
+    text-decoration: none;
+    color: #dbdbdb;
+    border: none;
+}
+
+
 #botaodeletar {
     background-color: #FD5D5D;
     border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 #botaodeletar:hover {

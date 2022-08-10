@@ -19,18 +19,20 @@ module.exports = (app) => {
   
     app.get("/adicao_receita", (req, res) => receitasController.getAddReceitasForm(req, res));
     app.post("/save_receita", (req, res) => receitasController.saveReceita(req, res));
-  
+    
+    app.get("/edicao_receita/:id", (req, res) => receitasController.getEdtReceitasForm(req, res));
+    app.put("/receita_editada", (req, res) => {receitasController.editeReceita(req,res)});
 
-    app.get("/edicao_receita", (req, res) => {
-      res.render("edicao_receita", {
-        title: "Editar receita",
-        links: [
-          { href: "/", label: "Home"},
-          { href: "/receitas", label: "Receitas"},
-          { href: "/destaques", label: "Destaques"}
-        ]
-      });
-    });
+    //app.get("/edicao_receita/:id", (req, res) => {
+    //  res.render("edicao_receita", {
+    //    title: "Editar receita",
+    //    links: [
+    //      { href: "/", label: "Home"},
+    //      { href: "/receitas", label: "Receitas"},
+    //      { href: "/destaques", label: "Destaques"}
+    //    ]
+    //  });
+    //});
 
   /*
     app.get("/adicao_receita", (req, res) => {

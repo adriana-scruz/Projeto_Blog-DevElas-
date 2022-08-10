@@ -29,28 +29,25 @@
         </div>
         <div class="form-group">
             <label for="recipeTitle">Título da receita</label>
-            <input type="text" name="recipeTitle" id="recipeTitle" class="form-control" placeholder="Escreva o título de sua receita">
+            <input type="text" name="recipeTitle" id="recipeTitle" class="form-control" placeholder="<%= receita.titulo%>">
         </div>
         <div class="form-group">
             <label for="author">Autor da receita</label>
-            <input type="text" name="author" id="author" class="form-control" placeholder="Escreva o seu nome">
+            <input type="text" name="author" id="author" class="form-control" placeholder="<%= receita.autor %>">
         </div>
         <div class="form-group">
             <label for="url">Url do vídeo</label>
-            <input type="text" name="url" id="url" class="form-control" placeholder="Adicione o link do youtube">
+            <input type="text" name="url" id="url" class="form-control" placeholder="<%= receita.url %>">
         </div>
         <div class="form-group">
             <label for="ingredients">Ingredientes</label>
-            <textarea name="ingredients" id="ingredients" cols="40" rows="7" class="form-control" placeholder="Adicione os ingredientes aqui"></textarea>
+            <textarea name="ingredients" id="ingredients" cols="40" rows="7" class="form-control" placeholder="<%= receita.ingredientes %>"></textarea>
         </div>
         <div class="form-group">
             <label for="steps">Adicione os passos</label>
-            <textarea name="steps" id="steps" cols="40" rows="7" class="form-control" placeholder="Como realizar sua receita?"></textarea>
+            <textarea name="steps" id="steps" cols="40" rows="7" class="form-control" placeholder="<%= receita.preparo %>"></textarea>
         </div>
-        <div class="form-group">
-            <label for="tips">Dicas</label>
-            <textarea name="tips" id="tips" cols="40" rows="7" class="form-control" placeholder="Dê dicas sobre a sua receita"></textarea>
-        </div>
+
         <div class="button-send">
             <button type="submit" class="btn btn-send">Salvar</button>
         </div>

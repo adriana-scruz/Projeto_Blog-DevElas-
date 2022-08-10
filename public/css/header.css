@@ -38,7 +38,7 @@
     justify-content: center;
 }
 
-a:hover{
+.linksheader:hover{
     background-color: #FD5D5D;
     border-radius: 10px;
     color: white;
@@ -66,10 +66,6 @@ a:hover{
 .btn-menu:hover{
     background-color: #F85151;
     color: white;
-}
-
-.btn-menu:visited{
-    color: aliceblue;
 }
 
 .button{
