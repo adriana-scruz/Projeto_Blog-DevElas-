@@ -14,14 +14,13 @@ module.exports = (app) => {
       });
       
     app.get("/receita-individual/:id", (req,res) => {receitasController.getReceitaById(req,res)});
-    
     app.get("/receitas",(req,res) => {receitasController.getReceitas(req,res)});
   
     app.get("/adicao_receita", (req, res) => receitasController.getAddReceitasForm(req, res));
     app.post("/save_receita", (req, res) => receitasController.saveReceita(req, res));
     
     app.get("/edicao_receita/:id", (req, res) => receitasController.getEdtReceitasForm(req, res));
-    app.put("/receita_editada", (req, res) => {receitasController.editeReceita(req,res)});
+    app.put("/receita_editada", (req, res) => receitasController.editeReceita(req,res));
 
     //app.get("/edicao_receita/:id", (req, res) => {
     //  res.render("edicao_receita", {
