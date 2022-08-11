@@ -52,9 +52,6 @@ class receitasDAO {
   }
 
   editeReceita(id, receita, callback) {
-    const teste = JSON.parse(receita)
-    console.log(`Aqui já a receita do receitasDAO ${teste}`);
-
     const {
       titulo,
       url,
