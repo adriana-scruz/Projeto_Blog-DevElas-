@@ -52,6 +52,9 @@ class receitasDAO {
   }
 
   editeReceita(id, receita, callback) {
+    const teste = JSON.parse(receita)
+    console.log(`Aqui já a receita do receitasDAO ${teste}`);
+
     const {
       titulo,
       url,
@@ -64,7 +67,9 @@ class receitasDAO {
       autor,
     } = receita;
 
-    const sql = `UPDATE receitas SET image = ?, titulo = ?, autor = ?, url = ?, ingredientes = ?, preparo = ? WHERE id =?`;
+    
+
+    const sql = `UPDATE receitas SET image = ?, titulo = ?, autor = ?, url = ?, ingredientes = ?, preparo = ? WHERE id = ?`;
 
     this.db.run(
       sql,

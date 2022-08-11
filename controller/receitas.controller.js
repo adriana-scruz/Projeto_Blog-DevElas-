@@ -24,7 +24,7 @@ exports.getReceitas = (req, res) => {
 
 exports.getReceitaById = (req, res) => {
   const id = req.params.id;
-  receitasDAO.findById(id, (err, rows) => {
+  receitasDAO.findById(id,(err, rows) => {
     if (err) {
       return res.json({ message: "Houve um erro ao consultar os dados", err });
     }
@@ -61,106 +61,90 @@ exports.getAddReceitasForm = (req, res) => {
     if (err) {
       return res.status(500).json({
         errorMessage: "Erro ao consultar os dados.",
-        err: err,
+        err: err
       });
     }
 
-    res.render("adicao_receita", {
-      categories: rows,
-      title: "Nova receita",
-      links: [
-        { href: "/", label: "Home" },
-        { href: "/receitas", label: "Receitas" },
-        { href: "/destaques", label: "Destaques" },
-      ],
-    });
-  });
-};
+    res.render("adicao_receita", { categories: rows,
+    title: "Nova receita",
+    links: [
+          { href: "/", label: "Home"},
+          { href: "/receitas", label: "Receitas"},
+          { href: "/destaques", label: "Destaques"}
+        ]});
+  })};
 
 exports.saveReceita = (req, res) => {
   const formData = new formidable.IncomingForm();
   console.log(formData);
   formData.parse(req, (err, fields, files) => {
-    console.log(fields);
+    console.log(fields)
     if (err) {
       return res.status(500).json({
         errorMessage: "Algo errado aconteceu.",
-        err: err,
+        err: err
       });
     }
-
-    const imagesPath = path.join(
-      __dirname,
-      "../public/images/fotos",
-      files.image.newFilename
-    );
+    
+    const imagesPath = path.join(__dirname, "../public/images/fotos", files.image.newFilename);
 
     const receita = { ...fields, image: files.image.newFilename };
-
+    
     receitasDAO.saveReceita(receita, (err) => {
       if (err) {
         return res.status(500).json({
           errorMessage: "Erro ao salvar os dados.",
-          err: err,
+          err: err
         });
       }
 
       // Salva a imagem no caminho definido, apenas após obter sucesso ao salvar no banco
       fs.renameSync(files.image.filepath, imagesPath);
-
+  
       return res.redirect("/receitas");
     });
-  });
-};
+  })
+}
 
 exports.getEdtReceitasForm = (req, res) => {
   const id = req.params.id;
-
-  receitasDAO.findById(id, (err, rows) => {
+  receitasDAO.findById(id,(err, rows) => {
     if (err) {
-      return res.status(500).json({
-        errorMessage: "Houve um erro ao consultar os dados.",
-        err: err,
-      });
+      return res.json({ message: "Houve um erro ao consultar os dados", err });
     }
-
-    if (!rows) {
-      return res.status(404).json({
-        errorMessage: "Produto não encontrado.",
-        err: err,
-      });
-    }
-
-    res.render("", { receita: rows });
     res.render("edicao_receita", {
-      title: "Editando receitas",
+      title: "Receita",
       links: [
         { href: "/", label: "Home" },
         { href: "/receitas", label: "Receitas" },
         { href: "/destaques", label: "Destaques" },
-      ], receita: rows
+      ],
+      receita: rows,
     });
-  });
-};
+  })};
 
 exports.editeReceita = (req, res) => {
   const id = req.params.id;
   const formData = new formidable.IncomingForm();
+  
 
-  receitasDAO.findById(id, (err, row) => {
+
+
+  receitasDAO.findById(id, (err, row)=> {
     if (err) {
       return res.status(500).json({
         errorMessage: "Houve um erro ao consultar uns dados.",
-        err: err,
+        err: err
       });
     }
 
-    console.log(row)
+    console.log(`Aqui o ROW do controller ${row}`)
+    //console.log(`Aqui o ROW do controller ${teste}`)
 
     if (!row) {
       return res.status(500).json({
         errorMessage: "Produto não encontrado.",
-        err: err,
+        err: err
       });
     }
 
@@ -168,35 +152,42 @@ exports.editeReceita = (req, res) => {
       if (err) {
         return res.status(500).json({
           errorMessage: "Algo errado aconteceu.",
-          err: err,
+          err: err
+        });
+      }
+      
+    
+      const imagesPath = path.join(__dirname, "../public/images/fotos", files.image.newFilename);
+
+      const receita = {...row, ...fields, image: files.image.newFilename};
+      
+      const convert1 = JSON.stringify(receita);
+      const convert2 = JSON.parse(convert1)
+      console.log(`Aqui receita do controller ${convert2}`)
+
+
+    receitasDAO.editeReceita(id, receita, (err) => {
+      if (err) {
+        return res.status(500).json({
+          errorMessage: "Houve um erro ao consultar uns dados.",
+          err: err
         });
       }
 
-      const imagesPath = path.join(
-        __dirname,
-        "../public/images/fotos",
-        files.image.newFilename
-      );
-      const receita = { ...row, ...fields, image: files.image.newFilename };
+      fs.renameSync(files.image.filepath, imagesPath);
+      return res.redirect("/receitas");
 
-      receitasDAO.editeReceita(id, receita, (err2) => {
-        if (err2) {
-          return res.status(500).json({
-            errorMessage: "Houve um erro ao consultar uns dados.",
-            err: err2,
-          });
-        }
-
-        fs.renameSync(files.image.filepath, imagesPath);
-        return res.redirect("/receitas");
-      });
     });
-  });
-};
+
+  })
+
+
+  
+})}
 
 exports.getDeleteReceitaForm = (req, res) => {
   const id = req.params.id;
-  receitasDAO.findById(id, (err, rows) => {
+  receitasDAO.findById(id,(err, rows) => {
     if (err) {
       return res.json({ message: "Houve um erro ao consultar os dados", err });
     }
@@ -218,17 +209,18 @@ exports.deleteReceita = (req, res) => {
     if (err) {
       return res.status(500).json({
         errorMessage: "Algo inesperado aconteceu.",
-        err: err,
+        err: err
       });
     }
     const id = parseInt(fields.id);
-    console.log(id);
+    console.log(id)
 
-    receitasDAO.deleteReceita(id, (err) => {
+    receitasDAO.deleteReceita(id,(err) => {
       if (err) {
         return res.json({ message: "Houve um erro ao deletar a receita", err });
       }
-      res.status(204).redirect("/receitas");
+      res.status(204).redirect('/receitas')
     });
-  });
+  })
 };
+
