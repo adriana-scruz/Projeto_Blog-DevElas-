@@ -1,5 +1,5 @@
 const receitasController = require("../controller/receitas.controller");
-//const categoriesController = require("./controller/categories.controller");
+const categoriesController = require("../controller/categories.controller");
 
 module.exports = (app) => {
     app.get("/", (req, res) => {
@@ -8,7 +8,7 @@ module.exports = (app) => {
           links: [
             { href: "/", label: "Home"},
             { href: "/receitas", label: "Receitas"},
-            { href: "/destaques", label: "Destaques"}
+            { href: "/categorias", label: "Categorias"}
           ]
         });
       });
@@ -20,11 +20,13 @@ module.exports = (app) => {
     app.post("/save_receita", (req, res) => receitasController.saveReceita(req, res));
     
     app.get("/edicao_receita/:id", (req, res) => receitasController.getEdtReceitasForm(req, res));
-    app.post("/receita_editada/:id", (req, res) => receitasController.editeReceita(req,res));
+    app.post("/receita_editada/:id", (req, res) => receitasController.editeReceita(req,res));;
 
     app.get("/delete_receita/:id", (req, res) => receitasController.getDeleteReceitaForm(req, res))
     app.delete("/receita_excluida", (req, res) => receitasController.deleteReceita(req,res));
 
+    app.get("/categorias", (req, res) => categoriesController.getCategories(req, res));
+    app.get("/categorias/:id", (req, res) => receitasController.getReceitasByCategoryId(req, res));
 }
 
   

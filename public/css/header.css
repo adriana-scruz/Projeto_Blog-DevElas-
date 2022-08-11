@@ -38,11 +38,17 @@
     justify-content: center;
 }
 
+#botao_add{
+    color: white;
+    text-decoration: none;
+}
+
 .linksheader:hover{
     background-color: #FD5D5D;
     border-radius: 10px;
     color: white;
 }
+
 
 .logo{
     margin-top: 100px;

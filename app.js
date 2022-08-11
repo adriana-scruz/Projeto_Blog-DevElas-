@@ -13,44 +13,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+let methodOverride = require('method-override')
+// override with POST having ?_method=DELETE
+app.use(methodOverride('_method'))
+
 // Rotas
 require("./routes/app.routes")(app);
-
-/*
-app.get("/adicao_receita", (req, res) => {
-  res.render("adicao_receita", {
-    title: "Nova receita",
-    links: [
-      { href: "/", label: "Home"},
-      { href: "/receitas", label: "Receitas"},
-      { href: "/destaques", label: "Destaques"}
-    ]
-  });
-});
-
-app.get("/destaques", (req, res) => {
-  res.render("destaques", {
-    title: "Destaques",
-    links: [
-      { href: "/", label: "Home"},
-      { href: "/receitas", label: "Receitas"},
-      { href: "/destaques", label: "Destaques"}
-    ]
-  });
-});
-
-app.get("/edicao_receita", (req, res) => {
-  res.render("edicao_receita", {
-    title: "Editar receita",
-    links: [
-      { href: "/", label: "Home"},
-      { href: "/receitas", label: "Receitas"},
-      { href: "/destaques", label: "Destaques"}
-    ]
-  });
-});
-
-*/
 
 app.listen(port, () => {
   console.log(`Server running at ${port}`)

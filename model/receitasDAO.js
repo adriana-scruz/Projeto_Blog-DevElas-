@@ -9,13 +9,13 @@ class receitasDAO {
   findById(id, callback) {
     this.db.get(`SELECT * FROM receitas WHERE id = ?`, id, callback);
   }
-  findByAutor(id, callback) {
+  findByAutor(autor, callback) {
     this.db.get(`SELECT * FROM receitas WHERE autor = ?`, autor, callback);
   }
 
   findbyCategoryId(categoryID, callback) {
     this.db.all(
-      `SELECT * FROM receitas WHERE categoryId = ?`,
+      `SELECT * FROM receitas WHERE categoryID = ?`,
       categoryID,
       callback
     );
@@ -51,7 +51,7 @@ class receitasDAO {
     );
   }
 
-  editeReceita(id, receita, callback) {
+  editeReceita(id,receita, callback) {
     const {
       titulo,
       url,
@@ -64,9 +64,8 @@ class receitasDAO {
       autor,
     } = receita;
 
-    
+    const sql = `UPDATE receitas SET image = ?, titulo = ?, autor = ?, url = ?, ingredientes = ?, preparo = ? WHERE id =?`;
 
-    const sql = `UPDATE receitas SET image = ?, titulo = ?, autor = ?, url = ?, ingredientes = ?, preparo = ? WHERE id = ?`;
 
     this.db.run(
       sql,

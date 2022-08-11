@@ -7,13 +7,13 @@ CREATE TABLE categories(
 	image TEXT NOT NULL
 );
 
-INSERT INTO categories (name, image) VALUES ('Massas', '../public/imagens/categorias/massas.jpg');
-INSERT INTO categories (name, image) VALUES ('Guarnição', '../public/imagens/categorias/guarnicao.jpg');
-INSERT INTO categories (name, image) VALUES ('Entrada', '../public/imagens/categorias/entrada.jpg');
-INSERT INTO categories (name, image) VALUES ('Principal', '../public/imagens/categorias/principal.jpg');
-INSERT INTO categories (name, image) VALUES ('Sobremesa', '../public/imagens/categorias/sobremesas.jpg');
-INSERT INTO categories (name, image) VALUES ('Pão', '../public/imagens/categorias/pao.jpg');
-INSERT INTO categories (name, image) VALUES ('Caldo', '../public/imagens/categorias/caldos.jpg');
+INSERT INTO categories (name, image) VALUES ('Massas', .'categorias/massas.jpg');
+INSERT INTO categories (name, image) VALUES ('Guarnição', 'categorias/guarnicao.jpg');
+INSERT INTO categories (name, image) VALUES ('Entrada', 'categorias/entrada.jpg');
+INSERT INTO categories (name, image) VALUES ('Principal', 'categorias/principal.jpg');
+INSERT INTO categories (name, image) VALUES ('Sobremesa', 'categorias/sobremesas.jpg');
+INSERT INTO categories (name, image) VALUES ('Pão', 'categorias/pao.jpg');
+INSERT INTO categories (name, image) VALUES ('Caldo', 'categorias/pao.jpg');
 
 DROP TABLE IF EXISTS receitas;
 

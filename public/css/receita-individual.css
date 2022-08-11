@@ -89,6 +89,9 @@ li, .paragraph{
     border: none;
 }
 
+.paragrafo{
+    text-align: justify;
+}
 footer{
     padding-top: 3%;
 }

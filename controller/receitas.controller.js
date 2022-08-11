@@ -15,7 +15,7 @@ exports.getReceitas = (req, res) => {
       links: [
         { href: "/", label: "Home" },
         { href: "/receitas", label: "Receitas" },
-        { href: "/destaques", label: "Destaques" },
+        { href: "/categorias", label: "Categorias" },
       ],
       receitas: rows,
     });
@@ -33,28 +33,33 @@ exports.getReceitaById = (req, res) => {
       links: [
         { href: "/", label: "Home" },
         { href: "/receitas", label: "Receitas" },
-        { href: "/destaques", label: "Destaques" },
+        { href: "/categorias", label: "Categorias" },
       ],
       receita: rows,
     });
   });
 };
 
-/*
 exports.getReceitasByCategoryId = (req, res) => {
   const categoryId = req.params.id;
   receitasDAO.findbyCategoryId(categoryId, (err, rows) => {
     if (err) {
       return res.json({ errorMessage: "Houve um erro ao consultar os dados", err });
     }
-    
     if (!rows.length) {
-      return res.json({ errorMessage: "Produto não encontrado", err });
+      return res.json({ errorMessage: "Ainda não há receitas nessa categoria", err });
     }
 
-    res.render("index", { receitas: rows, role: "receitas" });
+    res.render("receitas", {
+    title: "Receita",
+    links: [
+      { href: "/", label: "Home" },
+      { href: "/receitas", label: "Receitas" },
+      { href: "/categorias", label: "Categorias" },
+    ],
+    receitas: rows});
   })
-};*/
+};
 
 exports.getAddReceitasForm = (req, res) => {
   categoryDAO.findAll((err, rows) => {
@@ -70,15 +75,13 @@ exports.getAddReceitasForm = (req, res) => {
     links: [
           { href: "/", label: "Home"},
           { href: "/receitas", label: "Receitas"},
-          { href: "/destaques", label: "Destaques"}
+          { href: "/categorias", label: "categorias"}
         ]});
   })};
 
 exports.saveReceita = (req, res) => {
   const formData = new formidable.IncomingForm();
-  console.log(formData);
   formData.parse(req, (err, fields, files) => {
-    console.log(fields)
     if (err) {
       return res.status(500).json({
         errorMessage: "Algo errado aconteceu.",
@@ -127,9 +130,6 @@ exports.editeReceita = (req, res) => {
   const id = req.params.id;
   const formData = new formidable.IncomingForm();
   
-
-
-
   receitasDAO.findById(id, (err, row)=> {
     if (err) {
       return res.status(500).json({
@@ -137,9 +137,6 @@ exports.editeReceita = (req, res) => {
         err: err
       });
     }
-
-    console.log(`Aqui o ROW do controller ${row}`)
-    //console.log(`Aqui o ROW do controller ${teste}`)
 
     if (!row) {
       return res.status(500).json({
@@ -155,8 +152,6 @@ exports.editeReceita = (req, res) => {
           err: err
         });
       }
-      
-    
       const imagesPath = path.join(__dirname, "../public/images/fotos", files.image.newFilename);
 
       const receita = {...row, ...fields, image: files.image.newFilename};
@@ -181,8 +176,6 @@ exports.editeReceita = (req, res) => {
 
   })
 
-
-  
 })}
 
 exports.getDeleteReceitaForm = (req, res) => {
@@ -223,4 +216,3 @@ exports.deleteReceita = (req, res) => {
     });
   })
 };
-
