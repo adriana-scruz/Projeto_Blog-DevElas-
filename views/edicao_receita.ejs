@@ -40,6 +40,19 @@
             <input type="text" name="url" id="url" class="form-control" placeholder="" value="<%= receita.url %>">
         </div>
         <div class="form-group">
+            <label for="nivel">Nível de Dificuldade da Receita</label>
+            <select class="form-select" aria-label="Default select example" name="nivel">
+                <option selected>Selecione o nível de dificuldade da receita </option>
+                <option value="Fácil">Fácil</option>
+                <option value="Médio">Médio</option>
+                <option value="Difícil">Difícil</option>
+              </select>
+        </div>
+        <div class="form-group">
+            <label for="local">Culinária/região da Receita</label>
+            <input type="text" name="local" id="local" class="form-control" placeholder="Escreva a região de origem da sua receita">
+        </div>
+        <div class="form-group">
             <label for="ingredientes">Ingredientes</label>
             <textarea name="ingredientes" id="ingredientes" cols="40" rows="7" class="form-control" placeholder="" value="<%= receita.ingredientes %>"></textarea>
         </div>
