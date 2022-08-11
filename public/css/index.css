@@ -8,17 +8,6 @@ body{
     margin: 0 auto;
 }
 
-hr{
-    height: 2px;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 10%;
-}
-
-#hr-img{
-    padding: 0 3%;
-}
-
 .container {
     width: 70%;
 }

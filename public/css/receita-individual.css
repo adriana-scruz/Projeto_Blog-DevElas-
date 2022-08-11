@@ -55,7 +55,7 @@ li, .paragraph{
     
     background-color: #01B057;
     border: none;
-    padding: 15px 32px;
+    padding: 15px 40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -76,12 +76,14 @@ li, .paragraph{
 
 #botaodeletar {
     background-color: #FD5D5D;
+    color: #FBF6F3;
     border: none;
-    padding: 15px 32px;
+    padding: 15px 40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    margin-left: 5px;
 }
 
 #botaodeletar:hover {
@@ -91,7 +93,11 @@ li, .paragraph{
 
 .paragrafo{
     text-align: justify;
+    padding: 5%;
 }
+
 footer{
     padding-top: 3%;
 }
+
+
