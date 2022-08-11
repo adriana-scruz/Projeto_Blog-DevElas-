@@ -64,11 +64,11 @@ class receitasDAO {
       autor,
     } = receita;
 
-    const sql = `UPDATE receitas SET image = ?, titulo = ?, autor = ?, url = ?, ingredientes = ?, preparo = ?`;
+    const sql = `UPDATE receitas SET image = ?, titulo = ?, autor = ?, url = ?, ingredientes = ?, preparo = ? WHERE id =?`;
 
     this.db.run(
       sql,
-      [image, titulo, autor, url, ingredientes, preparo],
+      [image, titulo, autor, url, ingredientes, preparo, id],
       callback
     );
   }
