@@ -58,18 +58,18 @@ class receitasDAO {
       image,
       ingredientes,
       preparo,
-      categoryID,
       local,
       nivel,
       autor,
     } = receita;
 
-    const sql = `UPDATE receitas SET image = ?, titulo = ?, autor = ?, url = ?, ingredientes = ?, preparo = ? WHERE id =?`;
+    const sql = `UPDATE receitas SET image = ?, titulo = ?, autor = ?, url = ?, ingredientes = ?, preparo = ?, local = ?, nivel = ? WHERE id =?`;
 
+    console.log(receita)
 
     this.db.run(
       sql,
-      [image, titulo, autor, url, ingredientes, preparo, id],
+      [image, titulo, autor, url, ingredientes, preparo, local, nivel, id],
       callback
     );
   }
