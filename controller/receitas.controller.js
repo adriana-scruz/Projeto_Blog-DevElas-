@@ -152,7 +152,7 @@ exports.editeReceita = (req, res) => {
           err: err
         });
       }
-      const imagesPath = path.join(__dirname, "../public/images/fotos", files.image.newFilename);
+      const imagesPath = path.join(__dirname, "../public/images/fotos-receita", files.image.newFilename);
 
       const receita = {...row, ...fields, image: files.image.newFilename};
       
