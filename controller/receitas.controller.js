@@ -1,6 +1,10 @@
+//Instanciamento do banco de dados
 const conn = require("../infra/db-connection")("infra/receitas.db");
+//Instanciamento das classes de interação com o banco de dados
 const receitasDAO = require("../model/receitasDAO")(conn);
 const categoryDAO = require("../model/categoriesDAO")(conn);
+
+//Importação de modulos externos e nativos
 const formidable = require("formidable");
 const path = require("path");
 const fs = require("fs");
@@ -27,6 +31,9 @@ exports.getReceitaById = (req, res) => {
   receitasDAO.findById(id,(err, rows) => {
     if (err) {
       return res.json({ message: "Houve um erro ao consultar os dados", err });
+    }
+    if (!rows) {
+      return res.json({ message: "Esta receita ainda não foi adicionada", err });
     }
     res.render("receitas-individual", {
       title: "Receita",
@@ -88,7 +95,12 @@ exports.saveReceita = (req, res) => {
         err: err
       });
     }
-    
+    if(fields.titulo == ""||fields.autor == ""||fields.ingredientes == ""||fields.preparo == ""){
+      return res.status(500).json({
+        errorMessage: "Erro na adição da receita. Valores obrigatórios não informados",
+        err: err
+      });
+    }
     const imagesPath = path.join(__dirname, "../public/images/fotos-receita", files.image.newFilename);
 
     const receita = { ...fields, image: files.image.newFilename };
@@ -206,7 +218,6 @@ exports.deleteReceita = (req, res) => {
       });
     }
     const id = parseInt(fields.id);
-    console.log(id)
 
     receitasDAO.deleteReceita(id,(err) => {
       if (err) {
