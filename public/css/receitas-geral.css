@@ -28,13 +28,22 @@ img {
   display: flex;
   align-items: center;
   background-color: #fd5d5d;
-  color: primary-color;
   padding: 22px 45px;
   font-size: 1rem;
   text-transform: uppercase;
   border-radius: border-radius;
   cursor: pointer;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.294);
+  color: white;
+  font-weight: 600;
+}
+
+.btn a{
+  text-decoration: none;
+}
+
+.btn:hover{
+  background-color: #e75d5d;
 }
 
 .i {

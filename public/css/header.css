@@ -67,6 +67,9 @@
     text-decoration: none;
 }
 
+.btn-menu a{
+    text-decoration: none;
+}
 
 
 .btn-menu:hover{
