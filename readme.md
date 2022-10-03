@@ -19,4 +19,8 @@ de culinária.
 ## Apresentação
 
 ![App Screenshot](https://raw.githubusercontent.com/adriana-scruz/Projeto_Blog-DevElas-/main/image.png?token=GHSAT0AAAAAABZAP57TUS44WHMZNOZSWSCOYZ3M5XA)
+ 
+## Pesquisa Clean Code, SOLID e Code Smells
+
+https://www.notion.so/Clean-Code-SOLID-e-Code-Smells-08c8c27e91664f149b91f4d35a973173
 
