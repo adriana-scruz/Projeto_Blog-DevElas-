@@ -18,7 +18,7 @@ de culinária.
 
 ## Apresentação
 
-![App Screenshot](https://raw.githubusercontent.com/adriana-scruz/Projeto_Blog-DevElas-/main/image.png?token=GHSAT0AAAAAABZAP57TUS44WHMZNOZSWSCOYZ3M5XA)
+![App Screenshot](https://codandoaos30.com.br/wp-content/uploads/2022/10/image.png)
  
 ## Pesquisa Clean Code, SOLID e Code Smells
 
